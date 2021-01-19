@@ -49,4 +49,16 @@ func main() {
 	num2 := 2.569e2
 	num3 := 2.569e-2
 	fmt.Println(num1, num2, num3)
+
+	//字符类型 没有char类型 存储单个字符使用byte（由于是utf-8所以不可保存中文） 字符串由字符组成，而不是字节
+	//直接输出的话 输出的是其ASCII 所以其取值范围也限定在其中
+	var c1 byte = 'a'
+	var c2 byte = '0'
+	fmt.Println(c1, c2)
+	//按字符输出需要格式化
+	fmt.Printf("%c %c", c1, c2)
+	//汉字的存储
+	var c3 int = '北'
+	fmt.Printf("%c %d", c3, c3)
+
 }
