@@ -98,4 +98,7 @@ func main() {
 	formatFloat := strconv.FormatFloat(numb2, 'f', 10, 64)
 	fmt.Printf("formatFloat‘type is %T\n", formatFloat)
 
+	itoa := strconv.Itoa(numb1)
+	fmt.Printf("itoa‘type is %T\n", itoa)
+
 }
