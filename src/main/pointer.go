@@ -7,7 +7,7 @@ package main
 
 import (
 	"fmt"
-	"goTestDemo/src/private"
+	"goTest/src/private"
 )
 
 func main() {
