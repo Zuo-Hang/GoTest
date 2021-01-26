@@ -7,6 +7,7 @@ package main
 
 import (
 	"fmt"
+	"goTestDemo/src/private"
 )
 
 func main() {
@@ -39,5 +40,13 @@ func main() {
 	//包名尽量和文件夹名相同、不要和标准库重名（可以不同，但是标准是相同的）
 	//变量、方法名、常量名——>驼峰法
 	//** 首字母大写为共有的（public意义）、首字母小写的是私有的（private意义）
-
+	//导包 ——> 在创建项目的时候，要注意go的路径结构、配置GOPATH。要不然会出现无法导包的问题。
+	//|--workspace
+	//----|src
+	//------|project
+	//----|pkg
+	//----|bin
+	name := private.Name
+	//private.name  这个是不能导入的
+	fmt.Println("private 包下的 Name 是", name)
 }
