@@ -31,4 +31,19 @@ func main() {
 	//go 在数据类型转换的时候，要是不是一个有效数字，则会将转换后的数字类型的默认值赋值给结果
 	parseInt1, _ := strconv.ParseInt(str1, 10, 64)
 	fmt.Printf("parseInt1'type is %T. parseInt1=%v\n", parseInt1, parseInt1)
+
+	//字符串更改    ----切片  切片里面保存的是字符： byte rune  (其实都是int32)
+	var s1 = "白萝卜"
+	s2 := []rune(s1)
+	s2[0] = '红'
+	fmt.Println(string(s2))
+	c1 := "白"
+	c2 := '白'
+	c3 := "H"
+	c4 := 'H'
+	fmt.Printf("c1=%T\n", c1)
+	fmt.Printf("c2=%T\n", c2)
+	fmt.Printf("c3=%T\n", c3)
+	fmt.Printf("c4=%T\n", c4)
+
 }

@@ -101,4 +101,12 @@ func main() {
 	itoa := strconv.Itoa(numb1)
 	fmt.Printf("itoa‘type is %T\n", itoa)
 
+	//8进制数  以0开头的
+	var num = 0777
+	fmt.Println(num)
+	//16进制数
+	var num22 = 0x777
+	fmt.Println(num22)
+	//没有办法直接定义2进制数
+
 }
