@@ -42,9 +42,23 @@ func logic() {
 
 }
 
+func bitwiseOperator() {
+	//位运算
+	//5:101 2:10
+	fmt.Println(5 & 2)  //000
+	fmt.Println(5 | 2)  //111
+	fmt.Println(5 ^ 2)  //异或 111
+	fmt.Println(5 << 1) //左移 1010
+	fmt.Println(5 >> 1) //右移 10
+
+	var i = int8(1)
+	fmt.Println(i << 10) //溢出 使用的时候注意
+
+}
+
 func assignment() {
 	//赋值运算符
-	// = 符合运算符 += -= *= /= %=
+	// = 符合运算符 += -= *= /= %= <<= >>= &= |= ^=
 	var a = 10
 	var b = 20
 	fmt.Printf("a=%v,b=%v\n", a, b)
@@ -52,11 +66,13 @@ func assignment() {
 	b = a - b
 	a = a - b
 	fmt.Printf("a=%v,b=%v\n", a, b)
+
 }
 
 func main() {
-	arithmetic()
-	relationship()
-	logic()
-	assignment()
+	//arithmetic()
+	//relationship()
+	//logic()
+	//assignment()
+	bitwiseOperator()
 }
