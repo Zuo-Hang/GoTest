@@ -11,6 +11,7 @@ import (
 )
 
 func main() {
+	//与C不同的是 go不可以进行指针运算
 	// &取地址符  *int 指针类型
 	i := 23
 	fmt.Println("i 的地址是", &i)
