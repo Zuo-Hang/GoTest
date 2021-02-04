@@ -6,11 +6,11 @@ package main
  */
 
 import (
+	"GoTest/src/private"
 	"fmt"
-	"goTest/src/private"
 )
 
-func main() {
+func point() {
 	//与C不同的是 go不可以进行指针运算
 	// &取地址符  *int 指针类型
 	i := 23
@@ -50,4 +50,25 @@ func main() {
 	name := private.Name
 	//private.name  这个是不能导入的
 	fmt.Println("private 包下的 Name 是", name)
+}
+
+func newAndMake() {
+	//这是不对的，虽然定义了一个指针变量，但是并没有赋初始值（没有开辟内存空间），为默认值nil。当下面通过指针赋值的时候，
+	//要通过地址获取内存时就会出现空指针异常
+	//var a *int
+	//*a=100
+	//fmt.Println(*a)
+
+	//new函数开辟空间（一般用于基本类型），返回的是对应类型的指针  基本很少用到
+	var a = new(int)
+	*a = 100
+	fmt.Println(*a)
+
+	//make也用于开辟内存空间，但是区别与new  只用于slice、map、chan的内存创建，返回的不是指针，而是这几个数据类型本身
+
+}
+
+func main() {
+	point()
+	newAndMake()
 }
